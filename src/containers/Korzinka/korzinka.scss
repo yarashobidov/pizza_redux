@@ -1,0 +1,231 @@
+.korzinka {
+  // Pusta component
+  .pusta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    h2 {
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+    img {
+      width: 260px;
+      margin-bottom: 40px;
+    }
+    .btn {
+      background-color: #282828;
+      color: #fff;
+      border: 1px solid #282828;
+      padding: 15px 35px;
+      border-radius: 30px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+  }
+  // Cart component
+  .cart {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 33px;
+      .title {
+        display: flex;
+        align-items: center;
+        span {
+          font-weight: bold;
+          font-size: 26px;
+          margin-left: 10px;
+          line-height: 39px;
+        }
+      }
+      .delete {
+        display: flex;
+        align-items: center;
+        color: #b6b6b6;
+        cursor: pointer;
+      }
+    }
+    .center {
+      // CartItem component
+      .cart-item {
+        display: grid;
+        grid-template-columns: 31% 20% 20% 7%;
+        justify-content: space-between;
+        align-items: center;
+        border-top: #f4f4f4 1px solid;
+        padding-top: 22px;
+        margin-bottom: 22px;
+        .left {
+          display: flex;
+          align-items: center;
+          .img {
+            img {
+              width: 80px;
+              max-height: 80px;
+            }
+          }
+          .text {
+            .title {
+              font-size: 20px;
+            }
+            .text-p {
+              color: #8d8d8d;
+            }
+          }
+        }
+        .center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          grid-gap: 12px;
+          font-weight: bold;
+          img {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+          }
+        }
+        .right {
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+        }
+        .end {
+          display: flex;
+
+          justify-content: end;
+          img {
+            cursor: pointer;
+          }
+        }
+      }
+      // ********End******** CartItem component
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      .dona,
+      .narx {
+        font-size: 22px;
+        line-height: 22px;
+      }
+      .dona {
+        span {
+          font-weight: bold;
+        }
+      }
+      .narx {
+        span {
+          color: #fe5f1e;
+          font-weight: bold;
+        }
+      }
+    }
+    .btn-group {
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      .btn {
+        padding: 16px 30px;
+        border-radius: 30px;
+      }
+      .btn-lht {
+        border: 1px solid #d3d3d3;
+        color: #cacaca;
+      }
+      .btn-bg {
+        background: #fe5f1e;
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .cart {
+      width: 90%;
+    }
+  }
+
+  @media only screen and (max-width: 769px) {
+    .cart {
+      width: 95%;
+      .text-p {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .cart {
+      width: 95%;
+      .top {
+        flex-direction: column;
+        .title {
+          margin-bottom: 15px;
+          img {
+            width: 32px;
+          }
+          span {
+            font-size: 22px;
+          }
+        }
+        .delete {
+          justify-content: flex-end;
+        }
+      }
+      .center {
+        .cart-item {
+          grid-template-columns: 30% 30% 30% 7%;
+          .left {
+            flex-direction: column;
+            .text {
+              .title {
+                font-size: 18px;
+              }
+            }
+          }
+          .center {
+            font-size: 15px;
+            img {
+              width: 28px;
+              height: 28px;
+            }
+          }
+          .right {
+            font-size: 15px;
+          }
+        }
+      }
+      .bottom {
+        flex-direction: column;
+        .dona {
+          margin-bottom: 20px;
+        }
+        .dona,
+        .pusta {
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+
+      .btn-group {
+        flex-direction: column-reverse;
+        text-align: center;
+
+        .btn-bg {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

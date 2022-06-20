@@ -1,0 +1,48 @@
+@font-face {
+  font-family: Proxima_Nova;
+  src: url(./fonts/Proxima\ Nova\ Font.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Proxima_Nova;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(22, 21, 21);
+}
+
+img {
+  max-width: 100%;
+}
+
+.app {
+  background: #ffdf8c;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 960px) {
+  .app {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .app {
+    padding: 6px;
+  }
+}
+
+.main {
+  background-color: #fff;
+  border-radius: 10px;
+  min-height: 98vh;
+  max-width: 1400px;
+  margin: 0 auto;
+}
